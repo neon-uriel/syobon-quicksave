@@ -1,0 +1,32 @@
+[package]
+name = "syobon-quicksave"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+windows-sys = { version = "0.59", features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_SystemServices",
+    "Win32_UI_Input_KeyboardAndMouse",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_Memory",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_LibraryLoader",
+    "Win32_Graphics_Gdi",
+] }
+
+[profile.release]
+opt-level = "z"
+strip = true
+
+[[bin]]
+name = "inject"
+path = "src/bin/inject.rs"
+
+[[bin]]
+name = "config"
+path = "src/bin/config.rs"
