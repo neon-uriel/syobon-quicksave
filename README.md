@@ -14,15 +14,14 @@
 syobon_quicksave.dll   インジェクトする DLL 本体
 inject.exe             DLL インジェクター
 config.exe             キー設定 GUI
-quicksave.bat          ゲーム起動後にダブルクリックするだけ
+launch.bat             ゲーム起動 + インジェクトを一発で行う
 quicksave.cfg          キー設定ファイル（config.exe が自動生成）
 ```
 
 ## 使い方
 
-1. ゲームを起動する
-2. `quicksave.bat` をダブルクリック（または `inject.exe` を実行）
-3. インジェクト成功でビープ音が鳴る
+1. `launch.bat` をダブルクリック（ゲーム起動 + インジェクトを自動実行）
+2. ビープ音が鳴れば成功
 
 | キー | 動作 |
 |------|------|
